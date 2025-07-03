@@ -4,7 +4,7 @@ input { margin: 5px; padding: 5px; }
 button { padding: 5px 10px; }
 li { margin-bottom: 10px; }
 body.bg-custom {
-    background: url('../images/bg.png') repeat;
+    background: url('contact/static/image/my_bg.png') repeat;
     background-size: cover;
     background-attachment: fixed;
 }
