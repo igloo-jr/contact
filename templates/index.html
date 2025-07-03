@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Contact Book</h1>
+    <form method="POST" action="/add">
+        <input name="name" placeholder="Name" required>
+        <input name="phone" placeholder="Phone" required>
+        <input name="email" placeholder="Email">
+        <input name="address" placeholder="Address">
+        <button type="submit">Add Contact</button>
+    </form>
+    <h2>Contacts</h2>
+    <ul>
+    {% for contact in contacts %}
+        <li>
+            <b>{{ contact.name }}</b> — {{ contact.phone }}
+            {% if contact.email %} | {{ contact.email }}{% endif %}
+            <a href="/edit/{{ contact.phone }}">Edit</a>
+            <a href="/delete/{{ contact.phone }}">Delete</a>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
