@@ -5,7 +5,7 @@ button { padding: 5px 10px; }
 li { margin-bottom: 10px; }
 <style>
     body {
-        background-image: url("{{ url_for('static', filename='images/my_bg.jpg') }}");
+        background-image: url("{{ url_for('static', filename='images/my_bg.png') }}");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
