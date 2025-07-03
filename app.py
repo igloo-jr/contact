@@ -1,7 +1,7 @@
-
 from flask import Flask, render_template, request, redirect, url_for
 from contact_manager import ContactManager
 from storage import StorageHandler
+import os
 
 app = Flask(__name__)
 manager = ContactManager(StorageHandler("data/contacts.json"))
@@ -42,4 +42,6 @@ def update_contact(phone):
     return redirect(url_for('index'))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Required for deployment platforms like Render
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host="0.0.0.0", port=port)
