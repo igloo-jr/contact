@@ -3,22 +3,9 @@ body { font-family: sans-serif; padding: 20px; }
 input { margin: 5px; padding: 5px; }
 button { padding: 5px 10px; }
 li { margin-bottom: 10px; }
-body {
-  background-image: url("/static/my_bg.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
+body.bg-custom {
+    background: url('../images/bg.png') repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-.container {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 2rem;
-  border-radius: 12px;
-  margin: 50px auto;
-  max-width: 800px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
