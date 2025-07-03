@@ -5,6 +5,7 @@ import os
 
 app = Flask(__name__)
 manager = ContactManager(StorageHandler("data/contacts.json"))
+app = Flask(__name__, static_folder='static', template_folder='templates')
 
 @app.route('/')
 def index():
