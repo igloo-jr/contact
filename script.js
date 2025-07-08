@@ -1,7 +1,7 @@
 // Contact storage and management
 let contacts = [];
 let editingId = null;
-let webAppUrl = '';
+let webAppUrl = 'https://script.google.com/macros/s/AKfycbz971nSKNgTLln97Tp4aUNpHoLTyGE_bVCncm-uA5vTbDs70HCxY055m-5wZcueptGm/exec';
 
 // Load contacts and configuration on page load
 document.addEventListener('DOMContentLoaded', function() {
